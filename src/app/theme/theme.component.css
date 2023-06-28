@@ -1,0 +1,16 @@
+h1{
+  color: darkslateblue;
+}
+ #wrap{
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+ }
+
+ footer
+{
+  color: darkslateblue;
+  flex-grow: 1;
+  background-color: lightblue;
+}
