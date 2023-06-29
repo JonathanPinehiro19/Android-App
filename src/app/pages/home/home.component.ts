@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  articles: any;
+
+  constructor(
+    private http: HttpClient
+  ){
+      this.getAllArticles();
+    }
+
+
+  getAllArticles(){
+    this.http.get('http://localhost:8080/articles')
+    .subscribe(response =>{
+      console.log(response);
+    },
+    (error)=>
+    console.log(error))
+  }
 }
